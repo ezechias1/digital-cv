@@ -936,7 +936,9 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 700px) {
+
+    /* Tablet */
+    @media (max-width: 768px) {
       .about-content {
         grid-template-columns: 1fr;
       }
@@ -945,16 +947,147 @@
         grid-template-columns: 1fr;
       }
 
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 500px) {
+
+      /* Nav: horizontal scroll, no wrapping */
+      nav {
+        padding: 0 16px;
+      }
+
+      .nav-inner {
+        height: 52px;
+      }
+
       .nav-links {
-        gap: 16px;
+        gap: 14px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none;
       }
 
       .nav-links a {
-        font-size: 13px;
+        font-size: 12px;
+        white-space: nowrap;
       }
 
-      .projects-grid {
+      /* Hero */
+      .hero {
+        padding: 110px 16px 50px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero-desc {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+      }
+
+      /* Sections */
+      section {
+        padding: 50px 16px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 28px;
+      }
+
+      /* About */
+      .about-text {
+        font-size: 14px;
+      }
+
+      .detail-card {
+        padding: 16px;
+      }
+
+      /* Skills */
+      .skills-grid {
         grid-template-columns: 1fr;
+      }
+
+      .skill-card {
+        padding: 18px;
+      }
+
+      /* Experience */
+      .timeline-item {
+        padding: 20px;
+      }
+
+      .timeline-header {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .timeline-role {
+        font-size: 16px;
+      }
+
+      .timeline-date {
+        align-self: flex-start;
+      }
+
+      /* Projects */
+      .project-card {
+        padding: 20px;
+      }
+
+      /* Education */
+      .edu-card {
+        padding: 20px;
+      }
+
+      /* Contact */
+      .contact-section {
+        padding: 50px 16px 70px;
+      }
+
+      .contact-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-links .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* Footer */
+      footer {
+        padding: 20px 16px;
+      }
+
+      /* Hide cursor glow on touch devices */
+      .cursor-glow {
+        display: none;
       }
     }
   </style>
