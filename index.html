@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ezechias Mulamba — Software Developer & Digital Marketer</title>
-  <meta name="description" content="Software Developer, Digital Marketer & AI Content Specialist based in Cape Town, South Africa.">
+  <meta name="description"
+    content="Software Developer, Digital Marketer & AI Content Specialist based in Cape Town, South Africa.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
       --bg: #0a0a0a;
@@ -23,7 +31,9 @@
       --green-glow: rgba(34, 197, 94, 0.15);
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Inter', -apple-system, sans-serif;
@@ -60,9 +70,15 @@
       text-decoration: none;
     }
 
-    .nav-logo span { color: var(--accent); }
+    .nav-logo span {
+      color: var(--accent);
+    }
 
-    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
 
     .nav-links a {
       color: var(--text-muted);
@@ -72,7 +88,9 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover {
+      color: var(--text);
+    }
 
     /* ── HERO ── */
     .hero {
@@ -105,62 +123,142 @@
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.4;
+      }
     }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     @keyframes slideRight {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
     @keyframes scaleIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
     @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
     }
 
     @keyframes blink {
-      0%, 100% { border-color: var(--accent); }
-      50% { border-color: transparent; }
+
+      0%,
+      100% {
+        border-color: var(--accent);
+      }
+
+      50% {
+        border-color: transparent;
+      }
     }
 
     @keyframes glow {
-      0%, 100% { box-shadow: 0 0 5px var(--accent-glow); }
-      50% { box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(59, 130, 246, 0.05); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 5px var(--accent-glow);
+      }
+
+      50% {
+        box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(59, 130, 246, 0.05);
+      }
     }
 
     @keyframes particleFloat {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-10vh) rotate(720deg);
+        opacity: 0;
+      }
     }
 
     /* Scroll reveal base */
@@ -198,7 +296,9 @@
     }
 
     /* Stagger children */
-    .stagger-children .reveal { transition-delay: calc(var(--i, 0) * 0.1s); }
+    .stagger-children .reveal {
+      transition-delay: calc(var(--i, 0) * 0.1s);
+    }
 
     /* Particles background */
     .particles {
@@ -222,14 +322,65 @@
       animation: particleFloat linear infinite;
     }
 
-    .particle:nth-child(1) { left: 10%; animation-duration: 18s; animation-delay: 0s; width: 3px; height: 3px; }
-    .particle:nth-child(2) { left: 25%; animation-duration: 22s; animation-delay: 2s; width: 5px; height: 5px; }
-    .particle:nth-child(3) { left: 40%; animation-duration: 16s; animation-delay: 4s; }
-    .particle:nth-child(4) { left: 55%; animation-duration: 20s; animation-delay: 1s; width: 3px; height: 3px; }
-    .particle:nth-child(5) { left: 70%; animation-duration: 24s; animation-delay: 3s; width: 6px; height: 6px; }
-    .particle:nth-child(6) { left: 85%; animation-duration: 19s; animation-delay: 5s; }
-    .particle:nth-child(7) { left: 15%; animation-duration: 21s; animation-delay: 7s; width: 3px; height: 3px; }
-    .particle:nth-child(8) { left: 60%; animation-duration: 17s; animation-delay: 6s; width: 5px; height: 5px; }
+    .particle:nth-child(1) {
+      left: 10%;
+      animation-duration: 18s;
+      animation-delay: 0s;
+      width: 3px;
+      height: 3px;
+    }
+
+    .particle:nth-child(2) {
+      left: 25%;
+      animation-duration: 22s;
+      animation-delay: 2s;
+      width: 5px;
+      height: 5px;
+    }
+
+    .particle:nth-child(3) {
+      left: 40%;
+      animation-duration: 16s;
+      animation-delay: 4s;
+    }
+
+    .particle:nth-child(4) {
+      left: 55%;
+      animation-duration: 20s;
+      animation-delay: 1s;
+      width: 3px;
+      height: 3px;
+    }
+
+    .particle:nth-child(5) {
+      left: 70%;
+      animation-duration: 24s;
+      animation-delay: 3s;
+      width: 6px;
+      height: 6px;
+    }
+
+    .particle:nth-child(6) {
+      left: 85%;
+      animation-duration: 19s;
+      animation-delay: 5s;
+    }
+
+    .particle:nth-child(7) {
+      left: 15%;
+      animation-duration: 21s;
+      animation-delay: 7s;
+      width: 3px;
+      height: 3px;
+    }
+
+    .particle:nth-child(8) {
+      left: 60%;
+      animation-duration: 17s;
+      animation-delay: 6s;
+      width: 5px;
+      height: 5px;
+    }
 
     /* Hero animations */
     .hero-badge {
@@ -268,7 +419,7 @@
     .project-card:hover,
     .edu-card:hover,
     .detail-card:hover {
-      box-shadow: 0 0 20px var(--accent-glow), 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 0 20px var(--accent-glow), 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .detail-card,
@@ -296,7 +447,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
       transform: translateX(-100%);
       transition: transform 0.5s;
     }
@@ -324,7 +475,7 @@
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 30px var(--accent-glow), 0 10px 30px rgba(0,0,0,0.3);
+      box-shadow: 0 0 30px var(--accent-glow), 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     /* Timeline connector */
@@ -383,7 +534,11 @@
       margin-bottom: 32px;
     }
 
-    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
     .btn {
       display: inline-flex;
@@ -420,7 +575,32 @@
       transform: translateY(-1px);
     }
 
-    .btn svg { width: 18px; height: 18px; fill: currentColor; }
+    .btn-download {
+      background: linear-gradient(135deg, #a855f7, #7c3aed);
+      color: #fff;
+    }
+
+    .btn-download:hover {
+      background: linear-gradient(135deg, #9333ea, #6d28d9);
+      transform: translateY(-1px);
+    }
+
+    .btn-view {
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--accent);
+    }
+
+    .btn-view:hover {
+      background: var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
 
     /* ── SECTIONS ── */
     section {
@@ -457,7 +637,11 @@
       line-height: 1.8;
     }
 
-    .about-details { display: flex; flex-direction: column; gap: 16px; }
+    .about-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
 
     .detail-card {
       background: var(--surface);
@@ -480,9 +664,17 @@
       font-size: 20px;
     }
 
-    .detail-icon.blue { background: var(--accent-glow); }
-    .detail-icon.green { background: var(--green-glow); }
-    .detail-icon.purple { background: rgba(168, 85, 247, 0.15); }
+    .detail-icon.blue {
+      background: var(--accent-glow);
+    }
+
+    .detail-icon.green {
+      background: var(--green-glow);
+    }
+
+    .detail-icon.purple {
+      background: rgba(168, 85, 247, 0.15);
+    }
 
     .detail-label {
       font-size: 12px;
@@ -512,7 +704,9 @@
       transition: border-color 0.2s;
     }
 
-    .skill-card:hover { border-color: var(--accent); }
+    .skill-card:hover {
+      border-color: var(--accent);
+    }
 
     .skill-card-title {
       font-size: 14px;
@@ -521,7 +715,11 @@
       color: var(--accent);
     }
 
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
 
     .tag {
       background: var(--surface-2);
@@ -533,7 +731,11 @@
     }
 
     /* ── EXPERIENCE ── */
-    .timeline { display: flex; flex-direction: column; gap: 24px; }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
 
     .timeline-item {
       background: var(--surface);
@@ -544,7 +746,9 @@
       transition: border-color 0.2s;
     }
 
-    .timeline-item:hover { border-color: var(--accent); }
+    .timeline-item:hover {
+      border-color: var(--accent);
+    }
 
     .timeline-header {
       display: flex;
@@ -705,7 +909,9 @@
       padding: 80px 24px 100px;
     }
 
-    .contact-section .section-title { margin-bottom: 16px; }
+    .contact-section .section-title {
+      margin-bottom: 16px;
+    }
 
     .contact-desc {
       font-size: 16px;
@@ -731,14 +937,29 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 700px) {
-      .about-content { grid-template-columns: 1fr; }
-      .edu-grid { grid-template-columns: 1fr; }
-      .nav-links { gap: 16px; }
-      .nav-links a { font-size: 13px; }
-      .projects-grid { grid-template-columns: 1fr; }
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- PARTICLES -->
@@ -780,16 +1001,37 @@
     </p>
     <div class="hero-buttons">
       <a href="mailto:ezechiasmulamba@gmail.com" class="btn btn-primary">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
         Get in touch
       </a>
       <a href="https://github.com/ezechias1" target="_blank" class="btn btn-secondary">
-        <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0012 .3"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0012 .3" />
+        </svg>
         GitHub
       </a>
       <a href="https://www.linkedin.com/in/ezechias-mulamba-b12276283/" target="_blank" class="btn btn-secondary">
-        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg>
         LinkedIn
+      </a>
+      <a href="ezechias-mulamba-cv.html" download class="btn btn-download">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+        </svg>
+        Download CV
+      </a>
+      <a href="ezechias-mulamba-cv.html" target="_blank" class="btn btn-view">
+        <svg viewBox="0 0 24 24">
+          <path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
+        </svg>
+        View CV
       </a>
     </div>
   </header>
@@ -906,7 +1148,7 @@
       <div class="timeline-item reveal">
         <div class="timeline-header">
           <span class="timeline-role">Marketing & Development Intern</span>
-          <span class="timeline-date">Aug &mdash; Nov 2024</span>
+          <span class="timeline-date">Aug &mdash; Nov 2025</span>
         </div>
         <div class="timeline-company">Medwave</div>
         <ul class="timeline-list">
@@ -932,7 +1174,8 @@
         <p class="project-desc">TypeScript-based web application</p>
         <span class="project-tech-tag">TypeScript</span>
       </a>
-      <a href="https://github.com/ezechias1/E-sServices" target="_blank" class="project-card reveal-scale" style="--i:1">
+      <a href="https://github.com/ezechias1/E-sServices" target="_blank" class="project-card reveal-scale"
+        style="--i:1">
         <div class="project-card-header">
           <span class="project-name">E-s Services</span>
           <span class="project-arrow">&#8599;</span>
@@ -940,7 +1183,8 @@
         <p class="project-desc">Service-based web application for business solutions</p>
         <span class="project-tech-tag">JavaScript</span>
       </a>
-      <a href="https://github.com/ezechias1/free-flow-space" target="_blank" class="project-card reveal-scale" style="--i:2">
+      <a href="https://github.com/ezechias1/free-flow-space" target="_blank" class="project-card reveal-scale"
+        style="--i:2">
         <div class="project-card-header">
           <span class="project-name">Free Flow Space</span>
           <span class="project-arrow">&#8599;</span>
@@ -948,7 +1192,8 @@
         <p class="project-desc">A coding practice space for experimentation and learning</p>
         <span class="project-tech-tag">Python</span>
       </a>
-      <a href="https://github.com/ezechias1/Podcast-App-Project" target="_blank" class="project-card reveal-scale" style="--i:3">
+      <a href="https://github.com/ezechias1/Podcast-App-Project" target="_blank" class="project-card reveal-scale"
+        style="--i:3">
         <div class="project-card-header">
           <span class="project-name">Podcast App</span>
           <span class="project-arrow">&#8599;</span>
@@ -994,19 +1239,31 @@
     </p>
     <div class="contact-links reveal">
       <a href="mailto:ezechiasmulamba@gmail.com" class="btn btn-primary">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
         ezechiasmulamba@gmail.com
       </a>
       <a href="tel:0682531230" class="btn btn-secondary">
-        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 3c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.25 1.02l-2.2 2.19z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 3c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.25 1.02l-2.2 2.19z" />
+        </svg>
         068 253 1230
       </a>
       <a href="https://github.com/ezechias1" target="_blank" class="btn btn-secondary">
-        <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0012 .3"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 .3a12 12 0 00-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.3 3.5 1 .1-.78.42-1.3.76-1.6-2.67-.31-5.47-1.34-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 016.02 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 011.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0012 .3" />
+        </svg>
         GitHub
       </a>
       <a href="https://www.linkedin.com/in/ezechias-mulamba-b12276283/" target="_blank" class="btn btn-secondary">
-        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+        </svg>
         LinkedIn
       </a>
     </div>
@@ -1073,4 +1330,5 @@
     });
   </script>
 </body>
+
 </html>
