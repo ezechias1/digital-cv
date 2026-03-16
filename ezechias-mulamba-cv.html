@@ -27,8 +27,8 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--text);
       background: #f5f5f5;
-      line-height: 1.5;
-      font-size: 14px;
+      line-height: 1.45;
+      font-size: 13px;
     }
 
     .page {
@@ -38,58 +38,58 @@
       background: var(--bg);
       box-shadow: 0 2px 20px rgba(0,0,0,0.1);
       display: grid;
-      grid-template-columns: 240px 1fr;
+      grid-template-columns: 220px 1fr;
     }
 
     /* ── LEFT SIDEBAR ── */
     .sidebar {
       background: var(--primary);
       color: #fff;
-      padding: 40px 24px 30px;
+      padding: 32px 20px 24px;
     }
 
     .sidebar h1 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       line-height: 1.3;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .sidebar .tagline {
-      font-size: 12px;
+      font-size: 11px;
       color: #94b8b9;
-      margin-bottom: 28px;
+      margin-bottom: 22px;
       font-weight: 500;
     }
 
     .sidebar h3 {
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: #6ec6c7;
-      margin-bottom: 12px;
-      padding-bottom: 6px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
       border-bottom: 1px solid rgba(255,255,255,0.12);
     }
 
     .sidebar-section {
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .contact-item {
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-size: 12.5px;
+      gap: 8px;
+      margin-bottom: 7px;
+      font-size: 11px;
       color: #d0d0d0;
       word-break: break-all;
     }
 
     .contact-item svg {
       flex-shrink: 0;
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       margin-top: 2px;
       fill: #6ec6c7;
     }
@@ -99,155 +99,194 @@
       text-decoration: none;
     }
 
-    .contact-item a:hover {
-      color: #fff;
-    }
+    .contact-item a:hover { color: #fff; }
 
-    .skill-tags {
+    /* Tech logos grid */
+    .tech-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
+      margin-bottom: 12px;
     }
 
-    .skill-tag {
-      background: rgba(255,255,255,0.1);
-      color: #d0d0d0;
-      padding: 4px 10px;
-      border-radius: 4px;
-      font-size: 11.5px;
-      font-weight: 500;
+    .tech-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
-    .skill-category {
-      margin-bottom: 14px;
+    .tech-icon img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
     }
+
+    .tech-icon[data-colored] img {
+      filter: none;
+    }
+
+    .tech-icon .tech-tooltip {
+      display: none;
+      position: absolute;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 8px;
+      color: #94b8b9;
+      white-space: nowrap;
+    }
+
+    .tech-icon:hover .tech-tooltip { display: block; }
 
     .skill-category-title {
-      font-size: 11px;
+      font-size: 10px;
       color: #6ec6c7;
       font-weight: 600;
       margin-bottom: 6px;
     }
 
+    .skill-category { margin-bottom: 12px; }
+
+    .soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .soft-skill {
+      background: rgba(255,255,255,0.08);
+      color: #d0d0d0;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 500;
+    }
+
     /* ── RIGHT MAIN CONTENT ── */
     .main {
-      padding: 40px 32px 30px;
+      padding: 32px 28px 24px;
     }
 
     .section {
-      margin-bottom: 26px;
+      margin-bottom: 18px;
     }
 
     .section-title {
-      font-size: 15px;
+      font-size: 13px;
       font-weight: 700;
       color: var(--primary);
       text-transform: uppercase;
       letter-spacing: 1px;
-      padding-bottom: 6px;
+      padding-bottom: 4px;
       border-bottom: 2px solid var(--accent);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .summary {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--text-light);
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
-    /* Experience / Education entries */
     .entry {
-      margin-bottom: 18px;
+      margin-bottom: 14px;
     }
 
-    .entry:last-child {
-      margin-bottom: 0;
-    }
+    .entry:last-child { margin-bottom: 0; }
 
     .entry-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .entry-title {
-      font-size: 14px;
+      font-size: 12.5px;
       font-weight: 600;
       color: var(--primary);
     }
 
     .entry-date {
-      font-size: 11.5px;
+      font-size: 10.5px;
       color: var(--accent);
       font-weight: 600;
       white-space: nowrap;
     }
 
     .entry-subtitle {
-      font-size: 12.5px;
+      font-size: 11.5px;
       color: var(--text-light);
       font-weight: 500;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .entry ul {
-      padding-left: 18px;
+      padding-left: 16px;
     }
 
     .entry li {
-      font-size: 12.5px;
+      font-size: 11.5px;
       color: var(--text-light);
-      margin-bottom: 3px;
-      line-height: 1.5;
+      margin-bottom: 2px;
+      line-height: 1.45;
     }
 
     /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
+      gap: 8px;
     }
 
     .project-card {
       border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 12px 14px;
+      border-radius: 5px;
+      padding: 10px 12px;
     }
 
     .project-name {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 2px;
+      margin-bottom: 1px;
     }
 
     .project-tech {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--accent);
       font-weight: 500;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .project-desc {
-      font-size: 11.5px;
+      font-size: 10.5px;
       color: var(--text-light);
-      line-height: 1.45;
+      line-height: 1.4;
+    }
+
+    .project-link {
+      font-size: 10px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
     }
 
     /* ── PRINT STYLES ── */
     @media print {
-      body {
-        background: none;
-      }
-
+      body { background: none; }
       .page {
         margin: 0;
         box-shadow: none;
         width: 100%;
         min-height: 100vh;
       }
-
       @page {
         size: A4;
         margin: 0;
@@ -261,7 +300,7 @@
     <!-- ── SIDEBAR ── -->
     <aside class="sidebar">
       <h1>Ezechias Mulamba</h1>
-      <p class="tagline">Software Developer &bull; Digital Marketer &bull; AI Specialist</p>
+      <p class="tagline">Software Developer</p>
 
       <!-- Contact -->
       <div class="sidebar-section">
@@ -269,10 +308,6 @@
         <div class="contact-item">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           <a href="mailto:ezechiasmulamba@gmail.com">ezechiasmulamba@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.07 21 3 13.93 3 3c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.58.11.35.03.74-.25 1.02l-2.2 2.19z"/></svg>
-          <span>068 253 1230</span>
         </div>
         <div class="contact-item">
           <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
@@ -288,49 +323,60 @@
         </div>
       </div>
 
-      <!-- Technical Skills -->
+      <!-- Technical Skills — Logos -->
       <div class="sidebar-section">
         <h3>Technical Skills</h3>
 
         <div class="skill-category">
           <div class="skill-category-title">Languages & Frameworks</div>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">TypeScript</span>
+          <div class="tech-grid">
+            <div class="tech-icon" data-colored title="HTML"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span class="tech-tooltip">HTML</span></div>
+            <div class="tech-icon" data-colored title="CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span class="tech-tooltip">CSS</span></div>
+            <div class="tech-icon" data-colored title="JavaScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span class="tech-tooltip">JavaScript</span></div>
+            <div class="tech-icon" data-colored title="TypeScript"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript"><span class="tech-tooltip">TypeScript</span></div>
+            <div class="tech-icon" data-colored title="React"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span class="tech-tooltip">React</span></div>
+            <div class="tech-icon" data-colored title="Next.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" style="filter:brightness(0) invert(1);"><span class="tech-tooltip">Next.js</span></div>
+            <div class="tech-icon" data-colored title="Python"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span class="tech-tooltip">Python</span></div>
+            <div class="tech-icon" data-colored title="PHP"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"><span class="tech-tooltip">PHP</span></div>
           </div>
         </div>
 
         <div class="skill-category">
-          <div class="skill-category-title">Platforms & Tools</div>
-          <div class="skill-tags">
-            <span class="skill-tag">WordPress</span>
-            <span class="skill-tag">Breakdance</span>
-            <span class="skill-tag">GoHighLevel</span>
-            <span class="skill-tag">Beefree</span>
-            <span class="skill-tag">Git / GitHub</span>
+          <div class="skill-category-title">Tools & Platforms</div>
+          <div class="tech-grid">
+            <div class="tech-icon" data-colored title="WordPress"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" style="filter:brightness(0) invert(1);"><span class="tech-tooltip">WordPress</span></div>
+            <div class="tech-icon" data-colored title="Tailwind CSS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind"><span class="tech-tooltip">Tailwind</span></div>
+            <div class="tech-icon" data-colored title="Git"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span class="tech-tooltip">Git</span></div>
+            <div class="tech-icon" data-colored title="Supabase"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase"><span class="tech-tooltip">Supabase</span></div>
+            <div class="tech-icon" data-colored title="Node.js"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span class="tech-tooltip">Node.js</span></div>
+            <div class="tech-icon" data-colored title="Vercel"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" style="filter:brightness(0) invert(1);"><span class="tech-tooltip">Vercel</span></div>
+            <div class="tech-icon" data-colored title="Figma"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"><span class="tech-tooltip">Figma</span></div>
+            <div class="tech-icon" data-colored title="Playwright"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright"><span class="tech-tooltip">Playwright</span></div>
           </div>
         </div>
+      </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">AI & Automation</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Anti-Gravity AI</span>
-            <span class="skill-tag">Claude Code</span>
-            <span class="skill-tag">Higgsfield AI</span>
-          </div>
+      <!-- Soft Skills -->
+      <div class="sidebar-section">
+        <h3>Other</h3>
+        <div class="soft-skills">
+          <span class="soft-skill">WooCommerce</span>
+          <span class="soft-skill">REST APIs</span>
+          <span class="soft-skill">AI Tools</span>
+          <span class="soft-skill">SEO</span>
+          <span class="soft-skill">Responsive Design</span>
+          <span class="soft-skill">Agile</span>
         </div>
+      </div>
 
-        <div class="skill-category">
-          <div class="skill-category-title">Marketing</div>
-          <div class="skill-tags">
-            <span class="skill-tag">Facebook Ads</span>
-            <span class="skill-tag">Email Marketing</span>
-            <span class="skill-tag">Content Strategy</span>
-          </div>
+      <!-- Languages -->
+      <div class="sidebar-section">
+        <h3>Languages</h3>
+        <div class="soft-skills">
+          <span class="soft-skill">English (Fluent)</span>
+          <span class="soft-skill">French (Fluent)</span>
+          <span class="soft-skill">Swahili</span>
+          <span class="soft-skill">Lingala</span>
         </div>
       </div>
     </aside>
@@ -340,13 +386,13 @@
 
       <!-- Professional Summary -->
       <div class="section">
-        <h2 class="section-title">Professional Summary</h2>
+        <h2 class="section-title">Profile</h2>
         <p class="summary">
-          Versatile software developer and digital marketing professional based in Cape Town,
-          with hands-on experience building web applications, creating AI-driven content, and
-          executing marketing campaigns. Skilled at bridging the gap between technical development
-          and business growth through automation, creative content production, and modern web
-          technologies. Passionate about leveraging AI tools to deliver innovative solutions efficiently.
+          Software developer based in Cape Town building web applications, custom WordPress themes,
+          and full-stack PWAs. Experience with vanilla JavaScript, React, Next.js, TypeScript, and
+          Supabase. Currently developing BudgetWise, a fintech PWA with SA-specific features
+          (stokvel tracking, load shedding cost tracker, bank integration). Comfortable working
+          across the full stack from UI design to database architecture and API integration.
         </p>
       </div>
 
@@ -356,15 +402,15 @@
 
         <div class="entry">
           <div class="entry-header">
-            <span class="entry-title">Digital Marketing & Web Developer</span>
+            <span class="entry-title">Software Developer</span>
             <span class="entry-date">2025 &ndash; Present</span>
           </div>
-          <div class="entry-subtitle">Digital Agency (Contract)</div>
+          <div class="entry-subtitle">Down Dog Media (Web Agency)</div>
           <ul>
-            <li>Build and maintain client websites using WordPress and Breakdance page builder</li>
-            <li>Develop AI-generated visual content and photography using Anti-Gravity AI and Higgsfield</li>
-            <li>Implement marketing automation workflows and client dashboards</li>
-            <li>Produce creative assets for digital advertising campaigns</li>
+            <li>Build custom WordPress & WooCommerce themes from scratch (PHP, CSS, vanilla JS)</li>
+            <li>Develop full-stack web applications with Next.js, TypeScript, and Supabase</li>
+            <li>Build and deploy Progressive Web Apps with offline support and push notifications</li>
+            <li>Automate testing and deployment with Playwright and Vercel CI/CD</li>
           </ul>
         </div>
 
@@ -375,10 +421,9 @@
           </div>
           <div class="entry-subtitle">Medwave</div>
           <ul>
-            <li>Developed and implemented marketing strategies to increase brand visibility and engagement</li>
-            <li>Built automation systems to streamline business processes and improve efficiency</li>
-            <li>Produced video content and creative assets for marketing campaigns</li>
-            <li>Contributed to business management and team leadership initiatives</li>
+            <li>Built automation workflows and marketing dashboards using GoHighLevel</li>
+            <li>Created email campaigns and digital ad content for client acquisition</li>
+            <li>Produced video content and creative assets for social media campaigns</li>
           </ul>
         </div>
       </div>
@@ -388,35 +433,14 @@
         <h2 class="section-title">Education</h2>
         <div class="entry">
           <div class="entry-header">
-            <span class="entry-title">Software Development Program (6 months, full-time)</span>
+            <span class="entry-title">Software Development Program</span>
             <span class="entry-date">2023 &ndash; Apr 2024</span>
           </div>
-          <div class="entry-subtitle">CodeSpace Academy, Cape Town</div>
+          <div class="entry-subtitle">CodeSpace Academy, Cape Town &mdash; 6 months full-time</div>
           <ul>
-            <li>Programming Fundamentals, Intro to Web, Interactive Web Apps, Dynamic Web Apps</li>
-            <li>Specialisation in JavaScript Engineering</li>
-            <li>Overall average: 77% | Attendance: 80%</li>
+            <li>JavaScript engineering specialisation &mdash; 77% average</li>
+            <li>Web fundamentals, interactive apps, dynamic web apps, React</li>
           </ul>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">High School Diploma</span>
-            <span class="entry-date">2022</span>
-          </div>
-          <div class="entry-subtitle">Matriculated</div>
-        </div>
-      </div>
-
-      <!-- Certifications -->
-      <div class="section">
-        <h2 class="section-title">Certifications</h2>
-        <div class="entry">
-          <div class="entry-header">
-            <span class="entry-title">Certificate of Completion &mdash; Software Development</span>
-            <span class="entry-date">April 2024</span>
-          </div>
-          <div class="entry-subtitle">CodeSpace Academy (CERT:1313)</div>
         </div>
       </div>
 
@@ -425,28 +449,43 @@
         <h2 class="section-title">Key Projects</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <div class="project-name">Glaze</div>
-            <div class="project-tech">TypeScript</div>
-            <div class="project-desc">TypeScript-based web application</div>
+            <div class="project-name">BudgetWise</div>
+            <div class="project-tech">Vanilla JS &bull; Supabase &bull; Chart.js</div>
+            <div class="project-desc">Full-stack budgeting PWA with stokvel groups, load shedding tracker, bank sync, and offline mode. SA-focused fintech product.</div>
           </div>
           <div class="project-card">
-            <div class="project-name">E-s Services</div>
-            <div class="project-tech">JavaScript</div>
-            <div class="project-desc">Service-based web application for business solutions</div>
+            <div class="project-name">OneDayOnly Redesign</div>
+            <div class="project-tech">Next.js &bull; TypeScript &bull; Tailwind</div>
+            <div class="project-desc">130+ page redesign of SA's biggest daily deals site with dark mode, cart, wishlist, and search.</div>
           </div>
           <div class="project-card">
-            <div class="project-name">Free Flow Space</div>
-            <div class="project-tech">Python</div>
-            <div class="project-desc">A coding practice space for experimentation and learning</div>
+            <div class="project-name">Deep Sea Protocol</div>
+            <div class="project-tech">Python &bull; FastAPI &bull; LangGraph</div>
+            <div class="project-desc">AI-powered lead research SaaS using multi-agent architecture with Firecrawl and Gemini.</div>
           </div>
           <div class="project-card">
-            <div class="project-name">Podcast App</div>
-            <div class="project-tech">JavaScript</div>
-            <div class="project-desc">Podcast discovery and playback application with browsing features</div>
+            <div class="project-name">StandupBot</div>
+            <div class="project-tech">Next.js &bull; TypeScript &bull; Groq AI</div>
+            <div class="project-desc">AI standup dashboard with daily check-ins, live feed, and AI-generated summaries.</div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">WooCommerce Storefront</div>
+            <div class="project-tech">Next.js &bull; TypeScript &bull; WooCommerce API</div>
+            <div class="project-desc">Headless e-commerce storefront connected to WooCommerce REST API with cart and filtering.</div>
+          </div>
+          <div class="project-card">
+            <div class="project-name">LiveChat</div>
+            <div class="project-tech">Next.js &bull; TypeScript &bull; BroadcastChannel</div>
+            <div class="project-desc">Real-time chat app with channels, typing indicators, emoji reactions, and cross-tab sync.</div>
           </div>
         </div>
       </div>
 
+      <div style="text-align:center;margin-top:8px;">
+        <a href="https://github.com/ezechias1" style="font-size:11px;color:var(--accent);text-decoration:none;font-weight:600;">github.com/ezechias1</a>
+        <span style="font-size:11px;color:#ccc;margin:0 8px;">|</span>
+        <a href="https://budget-wise-ruby.vercel.app" style="font-size:11px;color:var(--accent);text-decoration:none;font-weight:600;">BudgetWise Live Demo</a>
+      </div>
     </main>
   </div>
 </body>
